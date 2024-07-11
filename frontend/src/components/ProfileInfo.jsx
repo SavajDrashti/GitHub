@@ -5,6 +5,8 @@ import { RiGitRepositoryFill, RiUserFollowFill, RiUserFollowLine } from "react-i
 import { FaXTwitter } from "react-icons/fa6";
 import { TfiThought } from "react-icons/tfi";
 import { formatMemberSince } from '../utils/functions.js';
+import LikeProfile from './LikeProfile.jsx';
+
 
 const ProfileInfo = ({userProfile}) => {      //userprofile aapde homepage ma aapeli chhe etle aama aapde as a prop aapi
 
@@ -38,6 +40,7 @@ const ProfileInfo = ({userProfile}) => {      //userprofile aapde homepage ma aa
 
           {/* View on Github */}
 					<div className='flex gap-2 items-center flex-col'>
+						<LikeProfile userProfile={userProfile}/>
 						<a
 							href={userProfile?.html_url}
 							target='_blank'

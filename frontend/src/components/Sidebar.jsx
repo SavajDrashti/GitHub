@@ -6,11 +6,13 @@ import { MdOutlineExplore } from "react-icons/md";
 import { PiSignInBold } from "react-icons/pi";
 import { MdEditDocument } from "react-icons/md";
 import Logout from './Logout';
+import { useAuthContext } from '../context/AuthContext';
 
 const Sidebar = () => {
 
   //for tempory bcz initialy there id no backend
-  const authUser = true;
+   const {authUser} = useAuthContext();
+  //const authUser = true
   return (
     <aside className='flex flex-col items-center min-1-12 sm:w-16 sticky top-0 left-0 h-screen py-8 overflow-y-auto border-r
     bg-glass'>

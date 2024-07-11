@@ -21,7 +21,7 @@ const HomePage = () => {
 
      try {
       
-      const res = await fetch(`http://localhost:5000/api/users/profile/${username}`);
+      const res = await fetch(`/api/users/profile/${username}`);
       const {repos, userProfile} = await res.json();
 
       repos.sort((a,b) => new Date(b.created_at) - new Date(a.created_at))  //decending recent first
